@@ -3,11 +3,56 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Minimal by Steve Smith</title>
+    <title>Qichao Chen @ Nottingham</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width">
+
+    <style>
+    .profile-container {
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-container img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    .icons-container {
+        display: flex;
+        justify-content: center;
+        gap: -5px;
+    }
+
+    .btn {
+        padding: 10px;
+        border: none;
+        background-color: transparent;  /* 设置为透明背景 */
+        color: #333;  /* 设置图标颜色为深灰色，您可以按需调整 */
+        text-decoration: none;
+        transition: color 0.3s;  /* 平滑过渡效果 */
+    }
+
+    .btn i {
+        font-size: 24px;
+        color: #333;  /* 设置图标颜色 */
+        transition: color 0.3s;  /* 平滑过渡效果 */
+    }
+
+    .btn:hover i {
+        color: #777;  /* 鼠标悬停时的图标颜色 */
+    }
+
+    </style>
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -15,21 +60,23 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Minimal</h1>
-        <p>A Theme for GitHub Pages</p>
-        <p class="view"><a href="http://github.com/orderedlist/minimal">View the Project on GitHub <small>orderedlist/minimal</small></a></p>
-        <ul>
-          <li><a href="https://github.com/orderedlist/minimal/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/orderedlist/minimal/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="http://github.com/orderedlist/minimal">Fork On <strong>GitHub</strong></a></li>
-        </ul>
+        
+        <div class="profile-container">
+        <h1>Qichao Chen</h1>
+        <img src="assets/head.jpeg" alt="me">
+          <div class="icons-container">
+            <a href="mailto:chqichao@outlook.com" class="btn"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/chen-qichao" class="btn"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/qichao_chen" class="btn"><i class="fab fa-twitter fa-3x socialicons"></i></a>
+            <a href="https://scholar.google.com/citations?user=your_google_scholar_id&user=Z4FVSrMAAAAJ" class="btn"><i class="fas fa-graduation-cap"></i></a>
+          </div>
+      </div>
+
+
       </header>
       <section>
-        <h1>GitHub Flavored Markdown</h1>
 
-        <p><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p>
-
-        <p>Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:</p>
+        <p>Hi, I'm Qichao Chen, a PhD candicate in Computer Science at the University of Nottingham.  </p>
 
         <p>Roses are red<br>
         Violets are blue</p>
@@ -198,7 +245,6 @@ end
         <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
       </section>
       <footer>
-        <p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
