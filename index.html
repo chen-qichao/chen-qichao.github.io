@@ -51,7 +51,32 @@
         color: #777;  /* 鼠标悬停时的图标颜色 */
     }
 
+    .toggle-content {
+        display: none;
+        border: 1px solid #ddd; /* 这将为摘要内容添加一个灰色边框 */
+        padding: 10px; /* 这将为摘要内容添加内部填充 */
+        margin-top: 10px; /* 这会在摘要上方添加一些空间 */
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.2); /* 这会为框添加一个轻微的阴影效果 */
+        max-width: 90%; /* 为了确保框不会过宽 */
+    }
+
+    .author-tag {
+        position: relative;
+        display: inline-block;  /* 让它可以包含绝对定位的子元素 */
+        margin-right: 20px; /* 新增的代码，为了给该元素增加右边距 */
+    }
+
+    .correspondence-icon {
+        font-size: 12px;  /* 调整图标大小 */
+        position: absolute;  /* 使其脱离正常文档流 */
+        top: 0;  /* 从上方定位 */
+        right: -15px;  /* 从右侧定位，可以根据需要调整 */
+        transform: translateY(-10%);  /* 使图标完全位于名字的上方 */
+    }
+
     </style>
+
+
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -87,6 +112,32 @@
         Violets are blue</p>
 
         <p>Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.</p>
+
+        <h2 class="section-title"><i class="fa fa-book" aria-hidden="true"></i> Publications</h2>
+
+        <div class="pub">
+          <span class="title"><b>Improving Energy-Based Out-of-Distribution Detection by Sparsity Regularization</b></span>
+          <span class="info"> [PAKDD 2022] </span><br>
+
+          <span class="authors">
+              <b>Qichao Chen</b>, 
+              Wenjie Jiang, 
+              <span class="author-tag">Kuan Li <a href="mailto:likuan@dgut.edu.cn"><i class="fa fa-envelope correspondence-icon" aria-hidden="true" title="kuanli@example.com"></i></a></span>, 
+              Yi Wang 
+          </span> <br>
+          
+          <span>
+              <a class="toggle-trigger" href="javascript:void(0);" onclick="toggleAbstract()">abstract <i class="fa fa-caret-right" aria-hidden="true" id="caretIcon"></i></a> / 
+              <a href="https://drive.google.com/file/d/1A9ZtyEQQlhxrAae4sV4azc7X9IsoF9Sv/view">paper</a> /
+              <a href="https://github.com/kuan-li/SparsityRegularization">code</a>
+          </span>
+          <div class="toggle-content" style="display: none;">
+            Out-of-distribution (OOD) detection is critical for safely deploying machine learning models in the open world. Recently, an energy-score based OOD detector was proposed for any pre-trained classification models. The energy score, which is less susceptible to overconfidence, proves to be a better substitute for the conventional approaches leveraging the softmax confidence score. However, current energy-score based methods rely heavily on large-scale auxiliary datasets and introduce several dataset-dependent hyperparameters. In this paper, we propose a simple yet effective sparsity-regularized learning objective for deep neural networks so that the energy-based detector works better. Our learning objective is parameter-free and its key idea is to enlarge the differences between network outputs of in-distribution data and OOD data by regularizing the networks to generate high sparsity representations for in-distribution data. We also contribute to a tiny auxiliary outlier dataset to replace the previous one, which reduces the volume size significantly (230G vs. 40M). Besides, a new energy-score based OOD detector named Sparsity-Regularized Outlier Exposure (SROE) is proposed to incorporate the proposed sparsity-regularized loss function into the traditional Outlier Exposure method. Experimental results show that the proposed sparsity-regularized loss strategy is effective, and the SROE OOD detector outperforms the other SOTA methods with a large margin.
+          </div>
+        </div>
+
+        <br>  
+
 
         <h2>A bit of the GitHub spice</h2>
 

@@ -15,3 +15,16 @@ function gestureStart() {
     }
   }
 }
+
+function toggleAbstract() {
+    var content = document.querySelector(".toggle-content");
+    var icon = document.getElementById("caretIcon");
+    
+    if(content.style.display === "none") {
+        content.style.display = "block";
+        icon.classList.replace('fa-caret-right', 'fa-caret-down');
+    } else {
+        content.style.display = "none";
+        icon.classList.replace('fa-caret-down', 'fa-caret-right');
+    }
+}
