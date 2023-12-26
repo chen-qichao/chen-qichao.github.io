@@ -75,6 +75,14 @@
         transform: translateY(-10%);  /* 使图标完全位于名字的上方 */
     }
 
+    .profile-picture {
+    width: 150px; /* 设置图片宽度 */
+    height: 150px; /* 设置图片高度 */
+    border-radius: 50%; /* 可选：创建圆形头像 */
+    object-fit: cover; /* 确保图片不会拉伸或压缩 */
+}
+
+
     </style>
 
 
@@ -86,10 +94,9 @@
   <body>
     <div class="wrapper">
       <header>
-        
         <div class="profile-container">
         <h1>Qichao Chen</h1>
-        <img src="assets/head.jpeg" alt="me">
+        <img src="assets/me.JPG" alt="me" class="profile-picture">
           <div class="icons-container">
             <a href="mailto:chqichao@outlook.com" class="btn"><i class="fas fa-envelope"></i></a>
             <a href="https://github.com/chen-qichao" class="btn"><i class="fab fa-github"></i></a>
